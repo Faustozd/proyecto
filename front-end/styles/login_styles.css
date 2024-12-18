@@ -1,0 +1,100 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #33334d, #1c1c2e);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    background-color: #24243e;
+    padding: 40px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #ffffff;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #dcdcdc;
+}
+
+.input-container {
+    position: relative;
+    margin: 30px 0; /* Mantiene el margen vertical entre contenedores */
+}
+
+.input-container label {
+    position: absolute;
+    top: -10px; /* Ajustamos para que esté encima del combo box */
+    left: 10px;
+    font-size: 12px;
+    color: #888;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-container input,
+.input-container select {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    background: #33334d;
+    border: none;
+    border-radius: 5px;
+    color: #dcdcdc;
+    outline: none;
+    transition: box-shadow 0.3s;
+    font-size: 16px;
+    margin-top: 10px; /* Añadido espacio entre la etiqueta y el campo */
+}
+
+.input-container input:focus,
+.input-container select:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label,
+.input-container select:focus + label {
+    top: -10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px; /* Espacio entre botones */
+}
+
+.login-button:hover {
+    background: linear-gradient(to right, #667eea, #557ac8);
+}
+
+.login-button:active {
+    transform: scale(0.98);
+}

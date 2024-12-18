@@ -1,0 +1,83 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #33334d, #1c1c2e);
+}
+
+.register-box {
+    background-color: #24243e;
+    padding: 40px;
+    width: 420px;  /* Aumentamos el ancho del contenedor */
+    max-width: 90%;  /* Se asegura de que se ajuste a pantallas pequeñas */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #ffffff;
+}
+
+.register-box h2 {
+    margin-bottom: 20px;
+    color: #dcdcdc;
+}
+
+.input-container {
+    position: relative;
+    margin: 20px 0;  /* Ajustamos el margen para dar más espacio vertical */
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px;  /* Reducimos ligeramente el padding */
+    background: #33334d;
+    border: none;
+    border-radius: 5px;
+    color: #dcdcdc;
+    outline: none;
+    transition: box-shadow 0.3s;
+    font-size: 16px;
+    box-sizing: border-box;  /* Asegura que el padding no aumente el ancho */
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;  /* Ajustamos la posición del label */
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-container input:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-button:hover {
+    background: linear-gradient(to right, #667eea, #557ac8);
+}
+
+.register-button:active {
+    transform: scale(0.98);
+}
